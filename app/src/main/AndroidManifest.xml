@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Lifestyle"></activity>
+        <activity android:name=".About_You" />
+        <activity android:name=".Home_Remedies" />
+        <activity android:name=".Doctors" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
