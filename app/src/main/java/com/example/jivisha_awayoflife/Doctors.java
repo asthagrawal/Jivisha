@@ -73,7 +73,7 @@ public class Doctors extends AppCompatActivity {
 
                 Document doc = Jsoup.connect(url).get();
 
-                Elements data = doc.select("div.info-section");
+                Elements data = doc.select("div.listing-doctor-card");
                 int size =data.size();
                         Log.d("doc", "doc: "+doc);
                 Log.d("data", "data: "+data);
@@ -87,10 +87,14 @@ public class Doctors extends AppCompatActivity {
                             .select("span")
                             .eq(i)
                             .text();
+                    String imgUrl = data.select("div.u-d-flex")
+                            .select("img")
+                            .eq(i)
+                            .attr("src");
 
 
-                    parseItems.add(new ParseItem(title, title2));
-                    Log.d("items", " . title: " + title + " . title2: " + title2);
+                    parseItems.add(new ParseItem(imgUrl,title, title2));
+                    Log.d("img: "+ imgUrl+ "items", " . title: " + title + " . title2: " + title2);
                 }
 
 
