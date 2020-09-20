@@ -39,6 +39,7 @@ DatabaseReference reff;
 
                         String disease = dataSnapshot.child("HIV").getValue().toString();
 
+
                         b.setText(disease);
 
 
