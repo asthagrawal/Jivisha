@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "305722553458",
+    "firebase_url": "https://jivisha---a-way-of-life.firebaseio.com",
+    "project_id": "jivisha---a-way-of-life",
+    "storage_bucket": "jivisha---a-way-of-life.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305722553458:android:9c223f117c1ca408247eeb",
+        "android_client_info": {
+          "package_name": "com.example.jivisha_awayoflife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305722553458-2ek4toljfk0onsvpi1mnb3t77nsnv35h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jivisha_awayoflife",
+            "certificate_hash": "e1b3bd7059f97df32140c6631aadae4de43771ee"
+          }
+        },
+        {
+          "client_id": "305722553458-j3rkh9jrqn3f0979f26ntg7p8knjk9tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpoWT7OK3cl4Nm6i5-YscAZEhsfKAAbGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305722553458-j3rkh9jrqn3f0979f26ntg7p8knjk9tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
