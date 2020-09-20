@@ -37,7 +37,7 @@ DatabaseReference reff;
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        String disease = dataSnapshot.child("Asthama").getValue().toString();
+                        String disease = dataSnapshot.child("HIV").getValue().toString();
 
                         b.setText(disease);
 
