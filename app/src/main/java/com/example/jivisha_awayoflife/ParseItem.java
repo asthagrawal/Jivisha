@@ -7,8 +7,7 @@ public class ParseItem {
     private String imgUrl;
 
 
-    public ParseItem() {
-    }
+
 
     public ParseItem(String imgUrl,String title, String title2) {
 
