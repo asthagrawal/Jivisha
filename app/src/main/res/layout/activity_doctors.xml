@@ -19,9 +19,9 @@
         app:layout_constraintVertical_bias="1.0">
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="220dp"
-            android:layout_height="47dp"
+            android:id="@+id/location"
+            android:layout_width="269dp"
+            android:layout_height="45dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/edit_text_border"
             android:fontFamily="sans-serif-light"
@@ -32,24 +32,26 @@
             android:textCursorDrawable="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.188"
+            app:layout_constraintHorizontal_bias="0.183"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.555" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
-            android:layout_width="64dp"
-            android:layout_height="46dp"
+            android:id="@+id/button"
+            android:layout_width="93dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/location_change_button"
             android:hint="Go"
+            android:clickable="true"
             android:textColor="#CABFBF"
             android:textColorHint="#DCD6D6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.073"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName4"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,13 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,6 +35,9 @@ public class Doctors extends AppCompatActivity {
     private ProgressBar progressBar;
     TextView textView;
     TextView textView2;
+    EditText location;
+    Button button;
+    String city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +51,45 @@ public class Doctors extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ParseAdapter(parseItems, this);
         recyclerView.setAdapter(adapter);
+
+
         textView=(TextView)findViewById(R.id.text);
         textView2=(TextView)findViewById(R.id.textView2);
+        location = (EditText) findViewById(R.id.location);;
+        button = (Button) findViewById(R.id.button);
+
+        city="faridabad";
+        location.setText(city);
+
+
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+
+                if(location.getText().toString().equals(null))
+                    city= "delhi";
+                else
+                   city= location.getText().toString();
+
+
+                adapter.notifyDataSetChanged();
+
+                location.setText(city);
+
+
+
+
+              }
+        });
 
         Content content = new Content();
         content.execute();
+
+
     }
 
     private class Content extends AsyncTask<Void,Void,Void> {
@@ -69,7 +113,7 @@ public class Doctors extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                String url = "https://www.practo.com/faridabad/ayurveda";
+                String url = "https://www.practo.com/"+city+"/ayurveda";
 
                 Document doc = Jsoup.connect(url).get();
 
@@ -84,11 +128,11 @@ public class Doctors extends AppCompatActivity {
                             .eq(i)
                             .text();
                     String title2 = data.select("div")
-                            .select("span")
+                            .select("a")
                             .eq(i)
                             .text();
                     String imgUrl = data.select("div.u-d-flex")
-                            .select("img")
+                            .select("img.alt")
                             .eq(i)
                             .attr("src");
 
@@ -96,9 +140,8 @@ public class Doctors extends AppCompatActivity {
                     parseItems.add(new ParseItem(imgUrl,title, title2));
                     Log.d("img: "+ imgUrl+ "items", " . title: " + title + " . title2: " + title2);
                 }
-
-
-            } catch (IOException e) {
+            }
+            catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -106,5 +149,7 @@ public class Doctors extends AppCompatActivity {
             return null;
         }
     }
+
+
 }
 
