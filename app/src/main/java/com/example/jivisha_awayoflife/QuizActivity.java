@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; //
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView ques,qno, timer;
