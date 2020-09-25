@@ -6,4 +6,5 @@
     <color name="pitta">#ff8708</color>
     <color name="vata">#00d9ff</color>
     <color name="kapha">#4c788a</color>
+    <color name="transparent">#00000000</color>
 </resources>

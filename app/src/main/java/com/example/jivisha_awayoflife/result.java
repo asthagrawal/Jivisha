@@ -23,6 +23,9 @@ public class result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         LinearLayout linearlayout = findViewById(R.id.linearlayout2);
+//        int a=getIntent().getIntExtra("a",0);
+//        int b=getIntent().getIntExtra("b",0);
+//        int c=getIntent().getIntExtra("c",0);
 
 
 
@@ -31,12 +34,15 @@ public class result extends AppCompatActivity {
 
     private void drawpie()
     {
+        int a=getIntent().getIntExtra("a",0);
+        int b=getIntent().getIntExtra("b",0);
+        int c=getIntent().getIntExtra("c",0);
         AnimatedPieView mAnimatedPieView = findViewById(R.id.AnimatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
-                .addData(new SimplePieInfo( 49, Color.parseColor("#6ee1f5"), "VATA \t 49"))//Data (bean that implements the IPieInfo interface)
-                .addData(new SimplePieInfo(43.0f, Color.parseColor("#ffa647"), "PITTA \t 43"))
-                .addData(new SimplePieInfo(37.0f, Color.parseColor("#4c788a"), "KAPHA \t 37")).drawText(true) .strokeMode(false)
+                .addData(new SimplePieInfo( a, Color.parseColor("#6ee1f5"), "VATA" + a))//Data (bean that implements the IPieInfo interface)
+                .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA" + b))
+                .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA" + c)).drawText(true) .strokeMode(false)
 
                 .duration(2000).textSize(35);// draw pie animation duration
 

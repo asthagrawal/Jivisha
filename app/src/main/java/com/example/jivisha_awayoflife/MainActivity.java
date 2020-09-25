@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
 //        location=(EditText) findViewById(R.id.location) ;
 //        button=(Button)findViewById(R.id.button) ;
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
     }
+
 
     public void button1_click(View view) {
 

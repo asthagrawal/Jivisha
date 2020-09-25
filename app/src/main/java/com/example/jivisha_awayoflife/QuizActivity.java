@@ -143,6 +143,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
     }
 
     private void changeQuestion()
@@ -163,7 +164,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         }
         else //Last ques
         {
-            Intent intent=new Intent(QuizActivity.this,ScoreActivity.class);
+            Intent intent=new Intent(QuizActivity.this,result.class);
             startActivity(intent);
             QuizActivity.this.finish();
         }
