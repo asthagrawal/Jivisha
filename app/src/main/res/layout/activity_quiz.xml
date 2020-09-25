@@ -31,10 +31,11 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:layout_margin="16dp"
-            android:textColor="@color/colorAccent"
             android:layout_gravity="center"
+
+            android:layout_margin="16dp"
             android:text="Question"
+            android:textColor="#D2CBDF"
 
             />
     </LinearLayout>

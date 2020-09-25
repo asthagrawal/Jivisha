@@ -58,8 +58,8 @@ public class Doctors extends AppCompatActivity {
         location = (EditText) findViewById(R.id.location);;
         button = (Button) findViewById(R.id.button);
 
-        city="faridabad";
-        location.setText(city);
+        city="delhi";
+//        location.setText(city);
 
 
 
@@ -72,13 +72,14 @@ public class Doctors extends AppCompatActivity {
 
                 if(location.getText().toString().equals(null))
                     city= "delhi";
-                else
-                   city= location.getText().toString();
-
+                else {
+                    city = location.getText().toString();
+                    location.setText(city);
+                }
 
                 adapter.notifyDataSetChanged();
 
-                location.setText(city);
+
 
 
 
