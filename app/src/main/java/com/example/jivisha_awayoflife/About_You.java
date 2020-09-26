@@ -8,26 +8,22 @@ import android.view.View;
 import android.widget.Button;
 
 public class About_You extends AppCompatActivity {
-    private Button button;
+
+    Button button_quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about__you);
 
-        button = (Button) findViewById(R.id.button2);
+        button_quiz=(Button)findViewById(R.id.button_quiz);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openresult();
+            public void onClick(View v) {
+                Intent intent=new Intent(About_You.this, QuizActivity.class);
+                startActivity(intent);
             }
-
         });
-    }
-    public void openresult() {
-
-        Intent intent=new Intent(this,result.class);
-        startActivity(intent);
     }
 }

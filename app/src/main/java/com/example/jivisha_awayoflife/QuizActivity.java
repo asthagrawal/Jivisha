@@ -118,7 +118,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.opt1:   //check button clicked!!!!
                 opt=1;
-                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.MAGENTA));
                 break;
             case R.id.opt2:
                 opt=2;

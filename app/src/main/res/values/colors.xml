@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#94ebe4</color>
-    <color name="colorPrimaryDark">#77b8b3</color>
-    <color name="colorAccent">#ffffff</color>
-    <color name="pitta">#ff8708</color>
-    <color name="vata">#00d9ff</color>
-    <color name="kapha">#4c788a</color>
+    <color name="colorPrimary">#2B3361</color>
+    <color name="colorPrimaryDark">#513B81</color>
+    <color name="colorAccent">#563A88</color>
     <color name="transparent">#00000000</color>
 </resources>
