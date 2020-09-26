@@ -25,8 +25,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     private List<Question> qlist;
     private int quesNum;
     private CountDownTimer countdown;
-
-    public int a,b,c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,18 +117,15 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         int opt;
         switch(v.getId()){
             case R.id.opt1:   //check button clicked!!!!
-
-                a++;
-                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+                opt=1;
+                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.MAGENTA));
                 break;
             case R.id.opt2:
-
-                b++;
+                opt=2;
                 ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
                 break;
             case R.id.opt3:
-
-                c++;
+                opt=3;
                 ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
                 break;
             default:
@@ -169,10 +164,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         else //Last ques
         {
             Intent intent=new Intent(QuizActivity.this,ScoreActivity.class);
-            intent.putExtra("a",a);
-            intent.putExtra("b",b);
-            intent.putExtra("c",c);
-
             startActivity(intent);
             QuizActivity.this.finish();
         }

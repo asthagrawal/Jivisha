@@ -42,7 +42,7 @@ public class ParseAdapter extends RecyclerView.Adapter<ParseAdapter.ViewHolder> 
         holder.textView.setText(parseItem.getTitle());
         holder.textView2.setText(parseItem.getTitle2());
         if (parseItem.getImgUrl().isEmpty()) {
-            holder.imageView.setImageResource(R.drawable.doctor);
+            holder.imageView.setImageResource(R.drawable.doctor2);
         } else{
             Picasso.get().load(parseItem.getImgUrl()).into(holder.imageView);
         }
