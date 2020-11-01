@@ -23,14 +23,16 @@
         <activity android:name=".Lifestyle" />
         <activity android:name=".About_You" />
         <activity android:name=".QuizActivity" />
-        <activity android:name=".Home_Remedies" />
-                <activity android:name=".Doctors" >
-<!--                    <intent-filter>-->
-<!--                        <action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".result"/>
+<!--            <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN"/>-->
 
-<!--                        <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                    </intent-filter>-->
-                </activity>
+<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity android:name=".Home_Remedies" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

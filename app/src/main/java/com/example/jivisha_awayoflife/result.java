@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.razerdp.widget.animatedpieview.AnimatedPieView;
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig;
@@ -16,6 +17,7 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo;
 
 public class result extends AppCompatActivity {
     private Button button;
+    int a,b,c;
 
 
     @Override
@@ -23,9 +25,21 @@ public class result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         LinearLayout linearlayout = findViewById(R.id.linearlayout2);
-//        int a=getIntent().getIntExtra("a",0);
-//        int b=getIntent().getIntExtra("b",0);
-//        int c=getIntent().getIntExtra("c",0);
+         a=getIntent().getIntExtra("a",0);
+         b=getIntent().getIntExtra("b",0);
+         c=getIntent().getIntExtra("c",0);
+
+        int vatap=(a*100)/11;
+        int pittap=(b*100)/11;
+        int kaphap=(c*100)/11;
+
+        TextView textView1 = (TextView) findViewById(R.id.textView8);
+        TextView textView2 = (TextView) findViewById(R.id.textView10);
+        TextView textView3 = (TextView) findViewById(R.id.textView9);
+
+        textView1.setText(" "+vatap +"%");
+        textView2.setText(" "+pittap +"%");
+        textView3.setText(" "+kaphap +"%");
 
 
 
@@ -34,15 +48,14 @@ public class result extends AppCompatActivity {
 
     private void drawpie()
     {
-        int a=getIntent().getIntExtra("a",0);
-        int b=getIntent().getIntExtra("b",0);
-        int c=getIntent().getIntExtra("c",0);
+
+
         AnimatedPieView mAnimatedPieView = findViewById(R.id.AnimatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
-                .addData(new SimplePieInfo( a, Color.parseColor("#6ee1f5"), "VATA" + a))//Data (bean that implements the IPieInfo interface)
-                .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA" + b))
-                .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA" + c)).drawText(true) .strokeMode(false)
+                .addData(new SimplePieInfo(a, Color.parseColor("#6ee1f5"), "VATA" + " "+a))//Data (bean that implements the IPieInfo interface)
+                .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA"+ " "+b))
+                .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA"+ " "+c)).drawText(true) .strokeMode(false)
 
                 .duration(2000).textSize(35);// draw pie animation duration
 
