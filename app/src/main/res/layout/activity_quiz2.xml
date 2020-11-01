@@ -98,6 +98,7 @@
             android:elevation="3dp"
             android:fontFamily="@font/aclonica"
             android:padding="16dp"
+            android:shadowColor="#FFFFFF"
             android:text="opt3"
             android:textColor="@color/colorAccent"
             android:textSize="18sp"
