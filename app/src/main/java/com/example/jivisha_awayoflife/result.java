@@ -49,7 +49,6 @@ public class result extends AppCompatActivity {
     private void drawpie()
     {
 
-
         AnimatedPieView mAnimatedPieView = findViewById(R.id.AnimatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
