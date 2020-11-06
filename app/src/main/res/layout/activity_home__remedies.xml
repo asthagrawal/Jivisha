@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#434a74"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Home_Remedies">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,7 +61,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:onClick="Goto_Remedies"
+                        android:text="Arthritis"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -84,7 +85,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Asthama"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -107,7 +109,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Back Pain"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -131,7 +134,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Cardiac Diseases"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -154,7 +158,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Cold and Cough"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -177,8 +182,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
-                        android:textSize="19dp"></Button>
+                        android:text="Depression"
+                        android:onClick="Goto_Remedies"
+                        android:textSize="18dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -201,7 +207,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Diabetes"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -224,7 +231,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Eye Problems"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -247,7 +255,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="HIV"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -271,7 +280,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Hair Loss"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -294,7 +304,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Insomnia"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -317,7 +328,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Migraine"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -341,7 +353,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Muscle Fatigue"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -364,7 +377,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Nose Bleeds"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -387,7 +401,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Sinusitis"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -411,7 +426,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Thyriod"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -434,30 +450,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="BUTTON"
-                        android:textSize="19dp"></Button>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/btn17"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:text="BUTTON"
+                        android:text="Weight Loss"
+                        android:onClick="Goto_Remedies"
                         android:textSize="19dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
