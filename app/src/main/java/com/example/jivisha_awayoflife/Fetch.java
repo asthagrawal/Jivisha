@@ -18,6 +18,7 @@ public class Fetch extends AppCompatActivity {
 TextView a,b,c,d;
 Button btn;
 DatabaseReference reff;
+String diseaseName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,29 +28,24 @@ DatabaseReference reff;
         a=(TextView)findViewById(R.id.Disease);
         b=(TextView)findViewById(R.id.Info);
 
-        btn=(Button)findViewById(R.id.fetch);
+        diseaseName = getIntent().getStringExtra("DISEASE");
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        updateUI();
+    }
+
+    void updateUI() {
+        a.setText(diseaseName);
+        reff= FirebaseDatabase.getInstance().getReference().child("Diseases");
+        reff.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                reff= FirebaseDatabase.getInstance().getReference().child("Diseases");
-                reff.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String disease = dataSnapshot.child(diseaseName).getValue().toString();
+                b.setText(disease);
+            }
 
-                        String disease = dataSnapshot.child("HIV").getValue().toString();
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-
-                        b.setText(disease);
-
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
             }
         });
     }

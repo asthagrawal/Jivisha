@@ -18,6 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -27,22 +33,42 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.annotation.Nullable;
+
 public class Doctors extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ParseAdapter adapter;
     private ArrayList<ParseItem> parseItems = new ArrayList<>();
     private ProgressBar progressBar;
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userId;
     TextView textView;
     TextView textView2;
     EditText location;
     Button button;
+    String location1;
     String city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors);
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+
+        userId = fAuth.getCurrentUser().getUid();
+
+        //DocumentReference documentReference = fStore.collection("users").document(userId);
+        //documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+           // @Override
+           // public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+           //     location.setText(documentSnapshot.getString("location"));
+          //  }
+        //});
+
 
         progressBar = findViewById(R.id.progressBar);
         recyclerView = findViewById(R.id.recyclerView);
