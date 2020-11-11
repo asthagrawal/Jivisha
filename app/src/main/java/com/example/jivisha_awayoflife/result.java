@@ -33,6 +33,7 @@ public class result extends AppCompatActivity {
         int pittap=(b*100)/11;
         int kaphap=(c*100)/11;
 
+
         TextView textView1 = (TextView) findViewById(R.id.textView8);
         TextView textView2 = (TextView) findViewById(R.id.textView10);
         TextView textView3 = (TextView) findViewById(R.id.textView9);
