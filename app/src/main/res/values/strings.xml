@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Jivisha - a way of life</string>
+    <string name="your_score">Your Score</string>
+    <string name="know_more">Know More</string>
+    <string name="vata">VATA</string>
+    <string name="pitta">PITTA</string>
+    <string name="kapha">KAPHA</string>
 </resources>

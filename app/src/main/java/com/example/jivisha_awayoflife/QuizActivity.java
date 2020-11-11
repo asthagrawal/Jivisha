@@ -24,6 +24,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     private Button opt1,opt2,opt3;
     private List<Question> qlist;
     private int quesNum;
+    int a,b,c;
     private CountDownTimer countdown;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     private void startTimer()
     {
-        countdown=new CountDownTimer(10000,1000) {
+        countdown=new CountDownTimer(20000,1000) {
             @Override
             public void onTick(long l) {
                 timer.setText(String.valueOf(l/1000));
@@ -114,19 +115,29 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onClick(View v) {
+
         int opt;
         switch(v.getId()){
             case R.id.opt1:   //check button clicked!!!!
+                opt2.setClickable(false);
+                opt3.setClickable(false);
                 opt=1;
-                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.MAGENTA));
+                a++;
+                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.LTGRAY));
                 break;
             case R.id.opt2:
+                opt3.setClickable(false);
+                opt1.setClickable(false);
                 opt=2;
-                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+                b++;
+                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.LTGRAY));
                 break;
             case R.id.opt3:
                 opt=3;
-                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+                opt1.setClickable(false);
+                opt2.setClickable(false);
+                c++;
+                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.LTGRAY));
                 break;
             default:
 
@@ -139,15 +150,17 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 changeQuestion();
             }
-        }, 2000);
+        }, 1000);
 
 
 
     }
 
     private void changeQuestion()
-    {
-        if(quesNum!=qlist.size())   //Not last question
+    {   opt1.setClickable(true);
+        opt2.setClickable(true);
+        opt3.setClickable(true);
+        if(quesNum<qlist.size()-1)   //Not last question
         {
             quesNum++;
 
@@ -157,13 +170,16 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             playAnim(opt3,0,3);
 
             qno.setText(String.valueOf(quesNum+1)+"/"+String.valueOf(qlist.size()));
-            timer.setText(String.valueOf(10));
+            timer.setText(String.valueOf(20));
             startTimer();
 
         }
         else //Last ques
         {
-            Intent intent=new Intent(QuizActivity.this,ScoreActivity.class);
+            Intent intent=new Intent(QuizActivity.this,result.class);
+            intent.putExtra("a",a);
+            intent.putExtra("b",b);
+            intent.putExtra("c",c);
             startActivity(intent);
             QuizActivity.this.finish();
         }
@@ -185,17 +201,20 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                         if(value==0){
                             switch (vno){
                                 case 0: ((TextView)v).setText(qlist.get(quesNum).getQues());
-                                break;
+                                    break;
                                 case 1: ((Button)v).setText(qlist.get(quesNum).getOpt1());
-                                break;
+
+                                    break;
                                 case 2: ((Button)v).setText(qlist.get(quesNum).getOpt2());
-                                break;
+                                    break;
                                 case 3: ((Button)v).setText(qlist.get(quesNum).getOpt3());
-                                break;
+                                    break;
                             }
 
+
+
                             if(vno!=0)
-                                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E99c03")));
+                                ((Button)v).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#B0B6DA")));
 
                             playAnim(v,1,vno);
                         }
@@ -215,3 +234,4 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 }
+
