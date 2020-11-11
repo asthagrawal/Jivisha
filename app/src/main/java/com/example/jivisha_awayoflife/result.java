@@ -30,8 +30,8 @@ public class result extends AppCompatActivity {
          c=getIntent().getIntExtra("c",0);
 
         int vatap=(a*100)/11;
-        int pittap=(b*100)/11;
-        int kaphap=(c*100)/11;
+        int pittap=(c*100)/11;
+        int kaphap=(b*100)/11;
 
 
         TextView textView1 = (TextView) findViewById(R.id.textView8);
@@ -45,6 +45,7 @@ public class result extends AppCompatActivity {
 
 
         drawpie();
+
     }
 
     private void drawpie()
