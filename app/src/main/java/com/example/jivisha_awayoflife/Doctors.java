@@ -94,7 +94,6 @@ public class Doctors extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                finish();
 
                 if(location.getText().toString().equals(null))
                     city= "delhi";
@@ -103,9 +102,10 @@ public class Doctors extends AppCompatActivity {
                     location.setText(city);
                 }
 
-                adapter.notifyDataSetChanged();
+                //adapter.notifyDataSetChanged();
 
-
+                Content content = new Content();
+                content.execute();
 
 
 
@@ -138,6 +138,7 @@ public class Doctors extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
+            parseItems.clear();
 
             try {
                 String url = "https://www.practo.com/"+city+"/ayurveda";
