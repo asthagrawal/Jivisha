@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E7E7EA"
     tools:context=".QuizActivity">
 
     <LinearLayout
@@ -69,7 +70,7 @@
             android:fontFamily="@font/aclonica"
             android:padding="16dp"
             android:text="opt1"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -84,7 +85,7 @@
             android:fontFamily="@font/aclonica"
             android:padding="16dp"
             android:text="opt2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -99,11 +100,9 @@
             android:fontFamily="@font/aclonica"
             android:padding="16dp"
             android:text="opt3"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-
 
 
     </LinearLayout>
@@ -119,7 +118,7 @@
         android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:text="10"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
