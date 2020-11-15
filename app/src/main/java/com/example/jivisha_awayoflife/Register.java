@@ -26,13 +26,13 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
     public static final String TAG = "TAG";
-    EditText mFullName,mPassword,mLocation;
+    EditText mFullName,mPassword;
     Button mRegister_button;
     TextView mLogin_text;
     FirebaseAuth fAuth;
 
 
-    FirebaseFirestore fStore;
+//    FirebaseFirestore fStore;
     String userID;
 
 
@@ -51,7 +51,7 @@ public class Register extends AppCompatActivity {
         mLogin_text   = findViewById(R.id.login_already);
 
         fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
+//        fStore = FirebaseFirestore.getInstance();
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
@@ -63,7 +63,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
                 final String fullname = mFullName.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
-                final String location = mLocation.getText().toString();
+//                final String location = mLocation.getText().toString();
 
 
                 if(TextUtils.isEmpty(fullname)){
@@ -87,16 +87,16 @@ public class Register extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
-                            Map<String,Object> user = new HashMap<>();
-                            user.put("email",fullname);
-                            user.put("fLocation",location);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d(TAG,"onSuccess: user created for"+ userID);
-                                }
-                            });
+//                            DocumentReference documentReference = fStore.collection("users").document(userID);
+//                            Map<String,Object> user = new HashMap<>();
+//                            user.put("email",fullname);
+//                            user.put("fLocation",location);
+//                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                @Override
+//                                public void onSuccess(Void aVoid) {
+//                                    Log.d(TAG,"onSuccess: user created for"+ userID);
+//                                }
+//                            });
                             startActivity(new Intent(getApplicationContext(),Login.class));
                         }
                         else {
