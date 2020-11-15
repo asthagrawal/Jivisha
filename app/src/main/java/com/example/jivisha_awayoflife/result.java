@@ -55,7 +55,7 @@ public class result extends AppCompatActivity {
         AnimatedPieView mAnimatedPieView = findViewById(R.id.AnimatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
-                .addData(new SimplePieInfo(a, Color.parseColor("#6ee1f5"), "VATA" + " "+vatap))//Data (bean that implements the IPieInfo interface)
+                .addData(new SimplePieInfo(a, Color.parseColor("#6ee1f5"), "VATTA" + " "+vatap))//Data (bean that implements the IPieInfo interface)
                 .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA"+ " "+pittap))
                 .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA"+ " "+kaphap)).drawText(true) .strokeMode(false)
 
