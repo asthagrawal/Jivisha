@@ -61,13 +61,13 @@ public class Doctors extends AppCompatActivity {
 
         userId = fAuth.getCurrentUser().getUid();
 
-        //DocumentReference documentReference = fStore.collection("users").document(userId);
-        //documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-           // @Override
-           // public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-           //     location.setText(documentSnapshot.getString("location"));
-          //  }
-        //});
+        DocumentReference documentReference = fStore.collection("users").document(userId);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+           public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+               location1 = documentSnapshot.getString("location");
+           }
+        });
 
 
         progressBar = findViewById(R.id.progressBar);
