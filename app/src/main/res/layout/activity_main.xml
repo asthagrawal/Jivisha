@@ -20,6 +20,7 @@
             android:layout_height="181dp"
             android:layout_below="@+id/title_JIVISHA"
             android:layout_alignParentEnd="true"
+
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-55dp"
@@ -259,11 +260,18 @@
 
         <Button
             android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="11dp"
-            android:text="Log out" />
+
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:text="Log out"
+            android:textAlignment="gravity"
+            android:textColor="#FDFCFC"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 </RelativeLayout>
