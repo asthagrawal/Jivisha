@@ -30,6 +30,8 @@ public class Register extends AppCompatActivity {
     Button mRegister_button;
     TextView mLogin_text;
     FirebaseAuth fAuth;
+
+
     FirebaseFirestore fStore;
     String userID;
 
