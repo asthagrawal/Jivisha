@@ -32,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         button2=(Button)findViewById(R.id.button2);
         button3=(Button)findViewById(R.id.button3);
         button4=(Button)findViewById(R.id.button4);
+        logoutbutton=(Button)findViewById(R.id.logout);
+
+        logoutbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
+            }
+        });
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
