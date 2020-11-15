@@ -81,7 +81,7 @@
         android:background="@android:color/black"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
