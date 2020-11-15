@@ -10,7 +10,7 @@ import android.widget.Button;
 public class Home_Remedies extends AppCompatActivity {
 
 
-    Button btn1, btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15, btn16, btn17;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +36,14 @@ public class Home_Remedies extends AppCompatActivity {
         setContentView(R.layout.activity_home__remedies);
 
     }
-    public void Goto_Remedies(View view){
+
+    public void Goto_Remedies(View view) {
         Intent intent = new Intent(this, Fetch.class);
         String txt = ((Button) view).getText().toString();
         intent.putExtra("DISEASE", txt);
         startActivity(intent);
-    };
-
-    public void lifestyle1(View view) {
-        setContentView(R.layout.lifestyle1);
-
     }
 
-    public void lifestyle2(View view) {
-        setContentView(R.layout.lifestyle2);
-    }
+    ;
 
-    public void lifestyle3(View view) {
-        setContentView(R.layout.lifestyle3);
-    }
 }
