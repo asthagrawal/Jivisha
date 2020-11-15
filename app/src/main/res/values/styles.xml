@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#333B68</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <item name="android:windowBackground">@drawable/splash</item>
 
     </style>
 

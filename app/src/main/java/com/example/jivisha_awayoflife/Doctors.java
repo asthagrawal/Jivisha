@@ -41,9 +41,6 @@ public class Doctors extends AppCompatActivity {
     private ParseAdapter adapter;
     private ArrayList<ParseItem> parseItems = new ArrayList<>();
     private ProgressBar progressBar;
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    String userId;
     TextView textView;
     TextView textView2;
     EditText location;
@@ -56,18 +53,7 @@ public class Doctors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors);
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-
-        userId = fAuth.getCurrentUser().getUid();
-
-        DocumentReference documentReference = fStore.collection("users").document(userId);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-           public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-               location1 = documentSnapshot.getString("location");
-           }
-        });
+        Toast.makeText(this, "Default location is Delhi, you can change location from above", Toast.LENGTH_LONG).show();
 
 
         progressBar = findViewById(R.id.progressBar);
@@ -110,7 +96,7 @@ public class Doctors extends AppCompatActivity {
 
 
 
-              }
+            }
         });
 
         Content content = new Content();
@@ -147,7 +133,7 @@ public class Doctors extends AppCompatActivity {
 
                 Elements data = doc.select("div.listing-doctor-card");
                 int size =data.size();
-                        Log.d("doc", "doc: "+doc);
+                Log.d("doc", "doc: "+doc);
                 Log.d("data", "data: "+data);
                 Log.d("size", ""+size);
                 for (int i = 0; i < size; i++) {
@@ -180,4 +166,3 @@ public class Doctors extends AppCompatActivity {
 
 
 }
-

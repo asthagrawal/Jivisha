@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/aclonica"
                 android:paddingTop="5dp"
                 android:text="DISEASES"
                 android:textColor="#FFFFFF"
@@ -46,7 +47,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
@@ -61,9 +62,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
                         android:text="Arthritis"
-                        android:textSize="19dp"></Button>
+                        android:textColor="#49319A"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -85,9 +88,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Asthama"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Asthama"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -109,9 +114,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Back Pain"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Back Pain"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -134,9 +141,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Cardiac Diseases"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Cardiac Diseases"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -158,9 +167,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Cold and Cough"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Cold and Cough"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -182,9 +193,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Depression"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="18dp"></Button>
+                        android:text="Depression"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -207,9 +220,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:text="Diabetes"
-                        android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -231,9 +245,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Eye Problems"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Eye Problems"
+                        android:textColor="#47348C"
+                        android:textSize="16dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -255,9 +271,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="HIV"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="HIV"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -280,9 +298,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Hair Loss"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Hair Loss"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -304,9 +324,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Insomnia"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Insomnia"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -328,9 +350,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Migraine"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Migraine"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -353,9 +377,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Muscle Fatigue"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Muscle Fatigue"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -377,9 +403,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Nose Bleeds"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Nose Bleeds"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -401,9 +429,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Sinusitis"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Sinusitis"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -426,9 +456,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Thyriod"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Thyriod"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -450,9 +482,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:text="Weight Loss"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:onClick="Goto_Remedies"
-                        android:textSize="19dp"></Button>
+                        android:text="Weight Loss"
+                        android:textColor="#47348C"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

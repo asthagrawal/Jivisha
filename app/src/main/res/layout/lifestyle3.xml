@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#434a74"
+    tools:context=".Fetch_Res">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginLeft="151dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:text="EVENING ROUTINE"
+        android:textColor="#FFFFFF"
+        android:textSize="33sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="10dp"
+        android:text="> The Triphala, 3 fruits: haritaki, amalaki and bibhitaki. These superfruits have the unique ability to both gently cleanse and detoxify the digestive tract while also nourishing the tissues of the body.
+> Proper sleep is one of the Three Pillars of Life in Ayurvedic medicine. Sleep is an essential time for healing the body from daily stress.
+> As our minds rest during sleep the body can focus on digesting, metabolizing, and regenerating.
+> Ayurveda understands that 10pm-2am is considered pitta time and it activates at that time. "
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+</androidx.constraintlayout.widget.ConstraintLayout>
