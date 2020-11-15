@@ -64,6 +64,12 @@ public class result extends AppCompatActivity {
         mAnimatedPieView.applyConfig(config);
         mAnimatedPieView.start();
     }
+    public void Goto_Dosha(View view) {
+        Intent intent = new Intent(this, Fetch_Res.class);
+        String txt = ((TextView) view).getText().toString();
+        intent.putExtra("DOSHA", txt);
+        startActivity(intent);
+    }
 
 
 }
