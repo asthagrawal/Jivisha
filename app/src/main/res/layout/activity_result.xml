@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="#434a74"
     tools:context=".result">
 
 
@@ -13,14 +14,15 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:text="RESULT"
@@ -28,27 +30,38 @@
         android:textSize="34sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="118dp"
+        android:gravity="center_horizontal"
+        android:text="CLICK TO KNOW MORE ABOUT YOUR DOSHAS"
+        android:textAlignment="center"
+        android:textColor="#FAF9F9"
+        android:textSize="19sp" />
+
     <LinearLayout
         android:id="@+id/linearlayout2"
-        android:layout_width="392dp"
-        android:layout_height="wrap_content"
+        android:layout_width="395dp"
+        android:layout_height="77dp"
         android:layout_below="@id/textView"
-        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
         android:layout_marginBottom="85dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="16dp"
-            android:layout_height="38sp"
-            android:layout_marginLeft="11sp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="5sp"
+
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:fontFamily="@font/aclonica"
             android:gravity="center_horizontal"
             android:onClick="Goto_Dosha"
+            android:paddingTop="18dp"
             android:text="Vatta"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -58,7 +71,7 @@
         <TextView
             android:id="@+id/textView5"
             android:layout_width="16dp"
-            android:layout_height="38sp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="11dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="5dp"
@@ -66,8 +79,9 @@
             android:background="@color/colorPrimary"
             android:fontFamily="@font/aclonica"
             android:gravity="center_horizontal"
-            android:text="Pitta"
             android:onClick="Goto_Dosha"
+            android:paddingTop="18dp"
+            android:text="Pitta"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="29sp"
@@ -76,7 +90,7 @@
         <TextView
             android:id="@+id/textView6"
             android:layout_width="16dp"
-            android:layout_height="38sp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="11dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="5dp"
@@ -84,9 +98,10 @@
             android:background="@color/colorPrimary"
             android:fontFamily="@font/aclonica"
             android:gravity="center_horizontal"
-            android:text="Kapha"
             android:onClick="Goto_Dosha"
-            android:textAlignment="center"
+            android:paddingTop="18dp"
+            android:text="Kapha"
+            android:textAlignment="gravity"
             android:textColor="@android:color/white"
             android:textSize="29sp"
             android:textStyle="bold" />
@@ -95,78 +110,61 @@
 
     <com.razerdp.widget.animatedpieview.AnimatedPieView
         android:id="@+id/AnimatedPieView"
-        android:layout_width="wrap_content"
-        android:layout_height="334dp"
-        android:layout_below="@+id/linearlayout2"
+        android:layout_width="356dp"
+        android:layout_height="282dp"
+        android:layout_below="@+id/ll"
         android:layout_alignStart="@+id/textView"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="-40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="310dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="50dp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_below="@+id/linearlayout2"
-        android:layout_alignBottom="@+id/AnimatedPieView"
-        android:layout_marginLeft="39sp"
-        android:layout_marginTop="-70sp"
-        android:layout_marginBottom="207dp"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_marginStart="39sp" />
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="245dp">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearlayout2"
-        android:layout_alignEnd="@+id/AnimatedPieView"
-        android:layout_alignRight="@+id/AnimatedPieView"
-        android:layout_alignBottom="@+id/AnimatedPieView"
-        android:layout_marginTop="-80dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="375dp"
-        android:fontFamily="sans-serif-condensed"
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="43dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
-        android:gravity="center"
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="76dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearlayout2"
-        android:layout_alignEnd="@+id/AnimatedPieView"
-        android:layout_alignRight="@+id/AnimatedPieView"
-        android:layout_alignBottom="@+id/AnimatedPieView"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="90dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginRight="135dp"
-        android:layout_marginBottom="375dp"
-        android:layout_toEndOf="@+id/textView8"
-        android:layout_toRightOf="@+id/textView8"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
+    </LinearLayout>
 
 </RelativeLayout>

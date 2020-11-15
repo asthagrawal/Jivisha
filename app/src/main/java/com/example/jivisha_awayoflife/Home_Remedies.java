@@ -43,4 +43,16 @@ public class Home_Remedies extends AppCompatActivity {
         startActivity(intent);
     };
 
+    public void lifestyle1(View view) {
+        setContentView(R.layout.lifestyle1);
+
+    }
+
+    public void lifestyle2(View view) {
+        setContentView(R.layout.lifestyle2);
+    }
+
+    public void lifestyle3(View view) {
+        setContentView(R.layout.lifestyle3);
+    }
 }

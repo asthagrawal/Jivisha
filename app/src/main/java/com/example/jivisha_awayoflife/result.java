@@ -18,6 +18,7 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo;
 public class result extends AppCompatActivity {
     private Button button;
     int a,b,c;
+    int vatap, pittap, kaphap;
 
 
     @Override
@@ -29,18 +30,18 @@ public class result extends AppCompatActivity {
          b=getIntent().getIntExtra("b",0);
          c=getIntent().getIntExtra("c",0);
 
-        int vatap=(a*100)/11;
-        int pittap=(c*100)/11;
-        int kaphap=(b*100)/11;
+        vatap=(a*100)/11+1;
+        pittap=(b*100)/11;
+        kaphap=(c*100)/11;
 
 
         TextView textView1 = (TextView) findViewById(R.id.textView8);
-        TextView textView2 = (TextView) findViewById(R.id.textView10);
-        TextView textView3 = (TextView) findViewById(R.id.textView9);
+        TextView textView2 = (TextView) findViewById(R.id.textView9);
+        TextView textView3 = (TextView) findViewById(R.id.textView10);
 
         textView1.setText(" "+vatap +"%");
-        textView2.setText(" "+pittap +"%");
-        textView3.setText(" "+kaphap +"%");
+        textView2.setText(" "+kaphap +"%");
+        textView3.setText(" "+pittap +"%");
 
 
 
@@ -54,9 +55,9 @@ public class result extends AppCompatActivity {
         AnimatedPieView mAnimatedPieView = findViewById(R.id.AnimatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
-                .addData(new SimplePieInfo(a, Color.parseColor("#6ee1f5"), "VATA" + " "+a))//Data (bean that implements the IPieInfo interface)
-                .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA"+ " "+b))
-                .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA"+ " "+c)).drawText(true) .strokeMode(false)
+                .addData(new SimplePieInfo(a, Color.parseColor("#6ee1f5"), "VATA" + " "+vatap))//Data (bean that implements the IPieInfo interface)
+                .addData(new SimplePieInfo(b, Color.parseColor("#ffa647"), "PITTA"+ " "+pittap))
+                .addData(new SimplePieInfo(c, Color.parseColor("#4c788a"), "KAPHA"+ " "+kaphap)).drawText(true) .strokeMode(false)
 
                 .duration(2000).textSize(35);// draw pie animation duration
 

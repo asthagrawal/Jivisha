@@ -33,8 +33,12 @@ public class Register extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
+        //for splash screen
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 

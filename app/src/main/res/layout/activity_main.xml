@@ -64,7 +64,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
-                android:layout_width="wrap_content"
+                android:layout_width="119dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_rowWeight="1"
@@ -72,6 +72,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_marginStart="15dp"
+
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
@@ -79,7 +80,13 @@
                 android:layout_marginBottom="15dp"
                 android:background="#FAF6F6"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="20dp">
+                app:cardElevation="10dp">
+
+
+
+
+
+
 
 
                 <LinearLayout
@@ -88,6 +95,12 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
                     android:orientation="horizontal">
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        -->
+<!--                        />-->
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -125,7 +138,7 @@
                 android:layout_marginBottom="15dp"
                 android:background="#FAF6F6"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="20dp">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -174,7 +187,7 @@
                 android:layout_margin="15dp"
                 android:background="#FAF6F6"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="20dp">
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -213,7 +226,7 @@
                 android:layout_margin="15dp"
                 android:background="#FAF6F6"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="20dp">
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
